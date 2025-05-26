@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <ctype.h>
+//we want to make a temperature converter
+//we want to convert from celsius to fahrenheit and vice versa
+
+int main(){
+    char unit;
+    float temp;
+
+    //check if the given temperature is in C or F
+    printf("Is the temperatire in C or F?:");
+    scanf("%c", &unit);
+
+    if( toupper(unit) == 'C') {
+        //convert from celsius to fahrenheit
+        printf("Enter the temperature in Celsius: ");
+        scanf("%f", &temp);
+        float fahrenheit = (temp * 9/5) + 32;
+        printf("Temperature in Fahrenheit: %.2f F\n", fahrenheit);
+    } else if (toupper(unit) == 'F') {
+        //convert from fahrenheit to celsius
+        printf("Enter the temperature in Fahrenheit: ");
+        scanf("%f", &temp);
+        float celsius = (temp - 32) * 5/9;
+        printf("Temperature in Celsius: %.2f C\n", celsius);
+    } else {
+        printf("Invalid unit. Please enter C for Celsius or F for Fahrenheit.\n");
+
+     
+}
